@@ -1,0 +1,32 @@
+<h1>Listing questions</h1>
+
+<table class="zebra-striped">
+  <tr>
+    <th>Short</th>
+    <th>Elaborate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <td><%= question.short %></td>
+    <td><%= question.elaborate %></td>
+    <td><%= link_to 'Show', question %></td>
+    <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    <!--<td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete %></td>-->
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div id="paginate">
+   <div data-pjax-container>
+	  <%= paginate @questions %>
+   </div>	  
+</div>
+<div class="btn" class="primary">
+<%= link_to 'New Question', new_question_path %>
+</div>
+

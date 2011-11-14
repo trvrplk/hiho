@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Short:</b>
+  <%= @question.short %>
+</p>
+
+<p>
+  <b>Elaborate:</b>
+  <%= raw Redcarpet.new(@question.elaborate).to_html %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

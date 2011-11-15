@@ -53,3 +53,5 @@ group :test do
   gem "spork"
   gem "guard-spork"
 end
+
+gem 'sunspot'

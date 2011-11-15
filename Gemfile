@@ -46,4 +46,11 @@ gem 'bson_ext'
 
 gem 'resque'
 
-gem 'rack-pjax'
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem "spork"
+  gem "guard-spork"
+end

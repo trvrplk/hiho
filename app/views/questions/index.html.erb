@@ -22,9 +22,7 @@
 
 <br />
 <div id="paginate">
-   <div data-pjax-container>
-	  <%= paginate @questions %>
-   </div>	  
+	<%= paginate @questions, :remote => true %>  
 </div>
 <div class="btn" class="primary">
 <%= link_to 'New Question', new_question_path %>
